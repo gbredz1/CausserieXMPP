@@ -18,12 +18,14 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/hmlongco/Factory", .upToNextMajor(from: "2.3.1")),
         .package(url: "https://github.com/realm/SwiftLint", .upToNextMajor(from: "0.54.0")),
+        //        .package(url: "https://github.com/CoreOffice/XMLCoder.git", .upToNextMajor(from: "0.15.0")),
     ],
     targets: [
         .target(
             name: "CauserieXMPP",
             dependencies: [
                 .product(name: "Factory", package: "factory")
+                //                .product(name: "XMLCoder", package: "XMLCoder"),
             ],
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
