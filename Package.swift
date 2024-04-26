@@ -32,10 +32,24 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "CauserieXMPPTests",
+            name: "CauserieXMPP-UnitTests",
             dependencies: [
                 "CauserieXMPP"
             ],
+            path: "Tests/UnitTests",
+            resources: [
+                .copy("Resources")
+            ],
+            plugins: [
+                .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
+            ]
+        ),
+        .testTarget(
+            name: "CauserieXMPP-IntegrationTests",
+            dependencies: [
+                "CauserieXMPP"
+            ],
+            path: "Tests/IntegrationTests",
             resources: [
                 .copy("Resources")
             ],

@@ -8,6 +8,7 @@
 import Foundation
 import libxml2
 
+/// SAXParser implementation with LibXML2 wrapper
 public class SAXParserLibXML2 {
     private let logger = Logger(for: SAXParser.self)
 
